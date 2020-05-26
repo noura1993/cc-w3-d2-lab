@@ -33,7 +33,7 @@ Q6. Why do we put a guard (an `if` clause) on the `@id` attribute in the constru
 - In the initialize method of the property class
 
 Q7. Why are some of the CRUD actions represented by instance methods, and others by class methods?
-- Class methods are helpful to find a record in the DB and create an instance from it that I can use later. Instance methods are useful to provide quick save/update/delete methods on the object after I've found or created it.
+- We are using class methods to find an entry in the database and get a Property instance created from it. We are using instance methods to do save/update/delete operations.
 
 Q8. What type of data structure is returned by calls to `db.exec_prepared()`? In the `save` method, how do we access the id from the returned data structure?
 - Array of hashes is returned. We access it by getting first element returned from the insert, and access the id from the hash and convert it to integer
